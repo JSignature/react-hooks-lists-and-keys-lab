@@ -1,15 +1,24 @@
-import React from "react";
+import React from 'react'
 
-function ProjectItem({ name, about, technologies }) {
+function ProjectItem({ id, name, about, technologies }) {
+  // {
+  //   console.log(id)
+  //   console.log(about)
+  //   console.log(technologies)
+  // }
+
+  const technology = technologies.map(element => {
+    // console.log(id)
+    return <span id={element}>{element}</span>
+  })
+
   return (
-    <div className="project-item">
+    <div id={id} className="project-item">
       <h3>{name}</h3>
       <p>{about}</p>
-      <div className="technologies">
-        {/* render a <span> for each technology in the technologies array */}
-      </div>
+      <div className="technologies">{technology}</div>
     </div>
-  );
+  )
 }
 
-export default ProjectItem;
+export default ProjectItem
