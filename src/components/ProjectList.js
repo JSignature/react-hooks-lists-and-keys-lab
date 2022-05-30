@@ -10,7 +10,7 @@ function ProjectList({ projects }) {
     // console.log(element.technologies)
     return (
       <ProjectItem
-        id={element.id}
+        key={element.id}
         name={element.name}
         about={element.about}
         technologies={element.technologies}

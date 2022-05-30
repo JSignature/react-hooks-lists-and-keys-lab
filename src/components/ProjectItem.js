@@ -8,8 +8,8 @@ function ProjectItem({ id, name, about, technologies }) {
   // }
 
   const technology = technologies.map(element => {
-    // console.log(id)
-    return <span id={element}>{element}</span>
+    // console.log(element)
+    return <span key={element}>{element}</span>
   })
 
   return (
